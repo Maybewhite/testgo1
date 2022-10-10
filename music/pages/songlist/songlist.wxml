@@ -1,0 +1,39 @@
+
+<swiper 
+    autoplay
+    indicator-dots
+    indicator-color="rgb(255,255,255,.5)"
+    indicator-active-color="#cc2200"
+    interval="3000"
+    duration="1000"
+    circular>
+  <block wx:for="{{background}}" wx:key="id">
+    <swiper-item>
+      <!-- <view>{{item}}</view> -->
+      <image src="{{item.imageUrl}}" mode="heightFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--  -->
+<view class="title">热门歌手</view>
+<view class="hotlist">
+<block wx:for="{{artists}}" wx:for-index="in" wx:key="this">
+  <view class="item" data-index="{{in}}" bindtap="hotlink">
+    <image src="{{item.img1v1Url}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</block>
+</view>
+<view class="title">最新音乐</view>
+<view class="musicbox">
+  <block wx:for="{{song}}" wx:key="id" wx:for-index="in"> 
+    <view class="item" >
+      <view class="txtbox">
+        <text class="mname">{{item.name}}</text>
+        <text class="name">{{item.song.artists[0].name}}-{{item.song.album.name}}</text>
+      </view>
+      <image class="playimg" src="/image/play.png" data-index="{{in}}" bindtap="playlink"></image>
+    </view>
+  </block>
+</view>
+

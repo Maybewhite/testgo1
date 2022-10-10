@@ -1,0 +1,64 @@
+/* pages/find/find.wxss */
+/* 搜索框 */
+.searchBox{
+  width: 85%;
+  height: 80rpx;
+  background-color: rgba(230,230,230);
+  margin: 10rpx auto;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.searchBox .txt{
+  width: 70%;
+  height: 80rpx;
+  padding-left: 10%;
+  float: left;
+}
+.searchBox .btn{
+  width: 20%;
+  height: 80rpx;
+  float: left;
+  position: relative;
+
+}
+.searchBox image{
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+}
+
+
+.musicbox .item{
+  display: flex;
+  padding: 10rpx 0rpx 10rpx 32rpx ;
+  justify-content: space-between; 
+  border-bottom: 1px solid rgb(236,236,236);
+}
+.musicbox .item .txtbox{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.item .playimg{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: auto 0;
+}
+.item .txtbox .mname{
+  font-size: 35rpx;
+  width: 600rpx;
+  /* 超出长度用...代替 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .txtbox .name{
+  font-size: 28rpx;
+  color: #777;
+} 

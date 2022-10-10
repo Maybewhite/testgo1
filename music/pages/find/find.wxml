@@ -1,0 +1,18 @@
+<!--pages/find/find.wxml-->
+<view class="searchBox">
+  <input type="text" class="txt" bindinput="keychange"/>
+  <view class="btn"><image src="/image/搜索.png" bindtap="serach"></image></view>
+  <view></view>
+</view>
+
+<view class="musicbox">
+  <block wx:for="{{songs}}" wx:key="id" wx:for-index="in"> 
+    <view class="item" >
+      <view class="txtbox">
+        <text class="mname">{{item.name}}</text>
+        <text class="name">{{item.ar[0].name}}-{{item.al.name}}</text>
+      </view>
+      <image class="playimg" src="/image/play.png" data-index="{{in}}" bindtap="playlink"></image>
+    </view>
+  </block>
+</view>

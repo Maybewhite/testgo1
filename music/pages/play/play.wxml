@@ -1,0 +1,40 @@
+<image src="{{music.al.picUrl}}" class="bg" mode="widthFix"></image>
+<view class="musicName">{{music.name}}</view>
+<!-- 轮播组件 -->
+<swiper>
+  <swiper-item class="imgBox">
+    <image src="{{music.al.picUrl}}">
+    </image>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="false" scroll-top="{{top}}">
+      <block  wx:for-index="in"  wx:for="{{lrcData}}" wx:key="this">
+        <view data-index="{{in}}" class="{{in===index?'active':''}}">{{item[1]}}</view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+<!-- 播放模式 -->
+<!-- <view class="playmode">
+  <image src="/image/liebiaoxunhuan.png"></image>
+</view> -->
+<!-- 进度条 -->
+<view class="timebox">
+  <view>{{playtime}}</view>
+  <!-- max代表总距离，value代表当前距离 -->
+  <slider bindchange="sliderchange" activeColor="#c20c0c" block-size="12" max="{{max}}" value="{{move}}" />
+  <view>{{timelength}}</view>
+</view>
+<!-- 底部 -->
+<view class="footer">
+  <image src="/image/{{qiehuan}}.png" style="width: 60rpx;height: 60rpx;" bindtap="qiehuan"></image>
+  <image src="/image/shangyiji.png" bindtap="prevSong"></image>
+  <image src="/image/{{action.method==='play'?'zanting':'bofang'}}.png" bindtap="playData"></image>
+  <image src="/image/xiayiji.png" bindtap="nextSong"></image>
+  <image src="/image/播放列表.png" style="width: 60rpx;height: 60rpx;"></image>
+</view>
+<!-- bindtimeupdate 播放进度改变时触发  -->
+<audio bindended="changeMusic" action="{{action}}" bindtimeupdate="timeChange"
+src="http://music.163.com/song/media/outer/url?id={{musicId}}.mp3"></audio>
+

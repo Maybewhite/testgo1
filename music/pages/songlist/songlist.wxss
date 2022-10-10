@@ -1,0 +1,92 @@
+/* pages/songlist/songlist.wxss */
+page{
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar{
+  display:none
+}
+
+swiper{
+  width: 100%;
+}
+swiper swiper-item{
+  width: 100%;
+}
+swiper-item image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.title{
+  font-size: 32rpx;
+  font-weight:800;
+  line-height: 80rpx;
+  color: #333;
+  position: relative;
+  text-indent: 35rpx;
+}
+.title::after{
+  content:'';
+  position: absolute;
+  width: 5rpx;
+  height: 50%;
+  background-color: #cc2200;
+  left: 0;
+  top:50%;
+  transform: translateY(-50%)
+}
+.hotlist{
+  height: 300rpx;
+  /* background-color: pink; */
+  display: flex;
+  overflow: auto;
+  align-items: center;
+}
+.hotlist .item{
+  width: 200rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+.hotlist .item image{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  border-radius: 10rpx;
+}
+.hotlist .item text{
+  font-size: 28rpx;
+  color: #4d4d4d;
+}
+
+
+
+.musicbox .item{
+  display: flex;
+  padding: 10rpx 0rpx 10rpx 32rpx ;
+  justify-content: space-between; 
+  border-bottom: 1px solid rgb(236,236,236);
+}
+.musicbox .item .txtbox{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.item .playimg{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: auto 0;
+}
+.item .txtbox .mname{
+  font-size: 35rpx;
+  width: 600rpx;
+  /* 超出长度用...代替 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .txtbox .name{
+  font-size: 28rpx;
+  color: #777;
+} 

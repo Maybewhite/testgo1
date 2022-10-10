@@ -1,0 +1,20 @@
+<view class="imgshow">
+  <image mode="widthFix" src="{{singerDetail.data.data.artist.cover}}"></image>
+  <view class="txtbox">
+    <view class="name">{{singerDetail.data.data.artist.name}}</view>
+    <view class="txt">{{singerDetail.data.data.identify.imageDesc}}</view>
+    <view class="fan">{{fans}}</view>
+  </view>
+</view>
+<view class="title">歌手简介</view>
+<view class="contect">{{singerDetail.data.data.artist.briefDesc}}</view>
+<view class="title">热门歌单</view>
+<view class="musicbox">
+  <view class="item" wx:for="{{hotMusicList.songs}}" wx:key="id" wx:for-index="in">
+    <view class="txtbox">
+      <text class="mname">{{item.name}}</text>
+      <text class="name">{{singerDetail.data.data.artist.name}}-{{item.al.name}}</text>
+    </view>
+    <image class="playimg" src="/image/play.png" bindtap="playlink" data-index="{{in}}"></image>
+  </view>
+</view>

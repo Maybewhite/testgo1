@@ -1,0 +1,80 @@
+/* pages/singerDetail/singerDetail.wxss */
+.imgshow{
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+  overflow: hidden;
+}
+.imgshow image{
+  position: absolute;
+  width: 100%;
+  width: 100%;
+  display: block;
+}
+.imgshow .txtbox{
+  position: absolute;
+  left: 40rpx;
+  bottom: 8%;
+}
+.txtbox view{
+  margin-top: 20rpx;
+}
+.txtbox .name{
+  font-size: 50rpx;
+  color: white;
+  font-weight: bold;
+}
+.txtbox .txt{
+  font-size: 30rpx;
+  color: #fff;
+}
+.txtbox .fan{
+  font-size: 30rpx;
+  color: #fff;
+  /* opacity: 0.8; */
+}
+.title{
+  font-size: 32rpx;
+  font-weight:800;
+  line-height: 80rpx;
+  color: #333;
+  position: relative;
+  text-indent: 32rpx;
+}
+.contect{
+  font-size: 26rpx;
+  padding: 0 30rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+
+
+.musicbox .item{
+  display: flex;
+  padding: 10rpx 0rpx 10rpx 32rpx ;
+  justify-content: space-between; 
+  border-bottom: 1px solid rgb(236,236,236);
+}
+.musicbox .item .txtbox{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.item .playimg{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: auto 0;
+}
+.item .txtbox .mname{
+  font-size: 35rpx;
+  width: 600rpx;
+  /* 超出长度用...代替 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .txtbox .name{
+  font-size: 28rpx;
+  color: #777;
+} 
